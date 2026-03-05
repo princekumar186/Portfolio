@@ -1230,3 +1230,29 @@ body {
         font-size: 1.4rem;
     }
 }
+
+.project-image {
+    position: relative;
+    overflow: hidden;
+    height: 200px;
+}
+
+.slider {
+    display: flex;
+    width: 600%;
+    animation: slide 35s infinite;
+}
+
+.slider img {
+    width: 100%;
+    object-fit: cover;
+}
+
+@keyframes slide {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-100%); }
+    40% { transform: translateX(-200%); }
+    60% { transform: translateX(-300%); }
+    80% { transform: translateX(-400%); }
+    100% { transform: translateX(-500%); }
+}
