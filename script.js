@@ -121,17 +121,19 @@ if (contactForm) {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Sending...';
 
-        setTimeout(() => {
-            // Here you would typically send the data to a server
-            console.log('Form Data:', {
-                name: name,
-                email: email,
-                subject: subject,
-                message: message
-            });
-
-            showNotification('Message sent successfully! Thank you for reaching out.', 'success');
+        emailjs.send("service_ofulz0n","template_zvzh75q",{
+            name: name,
+            email: email,
+            subject: subject,
+            message: message
+        }).then(function(){
+            showNotification('Message sent successfully!', 'success');
             contactForm.reset();
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Message';
+
+        },function(){
+            showNotification('Failed to send message', 'error');
             submitBtn.disabled = false;
             submitBtn.textContent = 'Send Message';
         }, 1500);
