@@ -1240,7 +1240,7 @@ body {
 .slider {
     display: flex;
     width: 600%;
-    animation: slide 35s infinite;
+    animation: slide 20s infinite;
 }
 
 .slider img {
