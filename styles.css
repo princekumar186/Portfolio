@@ -1256,3 +1256,8 @@ body {
     80% { transform: translateX(-400%); }
     100% { transform: translateX(-500%); }
 }
+
+.live-btn{
+    background: #28a745;
+    margin-left:10px;
+}
